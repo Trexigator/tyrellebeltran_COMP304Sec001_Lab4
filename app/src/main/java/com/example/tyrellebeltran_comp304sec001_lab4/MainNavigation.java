@@ -49,11 +49,11 @@ public class MainNavigation extends AppCompatActivity {
 // Handle item selection
         switch (item.getItemId()) {
             case R.id.custProfile:
-                Toast.makeText(this, "You selected Customer Profile.", Toast.LENGTH_LONG).show();
-                startActivity(new Intent(this, CustomerActivity.class));
+                //Toast.makeText(this, "You selected Customer Profile.", Toast.LENGTH_LONG).show();
+                startActivity(new Intent(this, CustomerUpdateActivity.class));
                 break;
             case R.id.logout:
-                Toast.makeText(this, "You selected Logout!", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Goodbye", Toast.LENGTH_LONG).show();
                 finish();
                 myPref.edit().clear().commit();
                 startActivity(new Intent(this, MainActivity.class));

@@ -11,4 +11,7 @@ public interface CustDao {
 
     @Query("SELECT * from customers where userName=(:userName) and password = (:password)")
     CustEntity login(String userName, String password);
+
+    @Query("SELECT * from customers where userName=(:userName)")
+    CustEntity selectCustInfo(String userName);
 }

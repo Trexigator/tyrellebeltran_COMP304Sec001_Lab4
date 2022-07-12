@@ -24,6 +24,27 @@
     <string name="custProfile">Customer Profile</string>
     <string name="logout">Logout</string>
 
+    <!-- Cars -->
+    <string name="car_name" />
+    <string name="Model" />
+    <string name="bkreview_info" />
+    <string name="ic_back" />
+    <string name="model" />
+    <string name="BrandName" />
+    <string name="price" />
+    <string name="buyCar" />
+    <item name="carList" type="id" />
+    <item name="custProfile" type="id" />
+    <item name="logout" type="id" />
+    <item name="listView" type="id" />
+    <item name="navCars" type="id" />
+    <item name="navHome" type="id" />
+    <item name="navCart" type="id" />
+    <item name="carNavView" type="id" />
+    <item name="navProfile" type="id" />
+
     <!-- Customer Profile -->
     <string name="custScreen">Welcome to your Customer Profile</string>
+    <string name="custBtnUpd">Update</string>
+
 </resources>

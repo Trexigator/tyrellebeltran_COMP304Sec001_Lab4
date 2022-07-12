@@ -5,20 +5,157 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".CustomerActivity">
+    tools:context=".CustomerUpdateActivity">
 
     <TextView
-        android:id="@+id/lblCustActivity"
+        android:id="@+id/tvCustScreen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
         android:text="@string/custScreen" />
 
     <TextView
-        android:id="@+id/txtUserNow"
+        android:id="@+id/lblUserNow"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:hint="Username"
+        android:inputType="textPersonName" />
 
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="325dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/lblFirstName"
+            android:layout_width="113dp"
+            android:layout_height="wrap_content"
+            android:text="First Name"
+            tools:layout_conversion_absoluteHeight="19dp"
+            tools:layout_conversion_absoluteWidth="69dp"
+            tools:layout_editor_absoluteX="50dp"
+            tools:layout_editor_absoluteY="191dp" />
+
+        <EditText
+            android:id="@+id/cpFirstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:ems="10"
+            android:hint=" First Name"
+            android:inputType="textPersonName"
+            tools:layout_conversion_absoluteHeight="45dp"
+            tools:layout_conversion_absoluteWidth="210dp"
+            tools:layout_editor_absoluteX="118dp"
+            tools:layout_editor_absoluteY="177dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/lblLastName"
+            android:layout_width="113dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Last Name" />
+
+        <EditText
+            android:id="@+id/cpLastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Last Name"
+            android:inputType="textPersonName" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/lblAddress"
+            android:layout_width="113dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Address" />
+
+        <EditText
+            android:id="@+id/cpAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Address"
+            android:inputType="textPostalAddress" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/lblCity"
+            android:layout_width="116dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="City" />
+
+        <EditText
+            android:id="@+id/cpCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="City"
+            android:inputType="textPostalAddress" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/lblPostalCode"
+            android:layout_width="9dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Postal Code" />
+
+        <EditText
+            android:id="@+id/cpPostalCode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Postal Code"
+            android:inputType="textPostalAddress" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnUpdCustProf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:text="@string/custBtnUpd" />
 
 
 </LinearLayout>
