@@ -19,11 +19,6 @@ public class MainActivity extends AppCompatActivity {
 
     private ProgressDialog progressDialog;
 
-    //for initial testing...
-    private final String userAdmin = "Admin";
-    private final String adminPword = "123456";
-
-    boolean isValid = false;
     private int counter = 5; //5 attempts to login.
 
     @Override
@@ -49,18 +44,31 @@ public class MainActivity extends AppCompatActivity {
                 if (inputName.isEmpty() || inputPassword.isEmpty())
                     Toast.makeText(MainActivity.this, "Incomplete details!", Toast.LENGTH_SHORT).show();
                 else {
-                    isValid = validate(inputName, inputPassword);
-
-                    if (!isValid) {
-                        counter--;
-                        Toast.makeText(MainActivity.this, "Incorrect Login. You have " + counter + " attempts left.", Toast.LENGTH_SHORT).show();
-                        if (counter == 0) {
-                            eLogin.setEnabled(false);
-                        }
-                    } else {
-                        Toast.makeText(MainActivity.this, "Login successful.", Toast.LENGTH_LONG).show();
-                        startActivity(new Intent(MainActivity.this, MainNavigation.class));
-                    }
+                        //verify details against DB.
+                        CustDatabase custDatabase = CustDatabase.getCustDatabase(getApplicationContext());
+                        final CustDao custDao = custDatabase.custDao();
+                        new Thread(new Runnable() {
+                            @Override
+                            public void run() {
+                                CustEntity custEntity = custDao.login(inputName, inputPassword); //run the query in the backend
+                                if (custEntity == null){
+                                    runOnUiThread(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            counter--;
+                                            Toast.makeText(MainActivity.this, "Incorrect Login. You have " + counter + " attempts left.", Toast.LENGTH_SHORT).show();
+                                            if (counter == 0) {
+                                                eLogin.setEnabled(false);
+                                            }
+                                        }
+                                    });
+                                }
+                                else{
+                                    String name = custEntity.userName;
+                                    startActivity(new Intent(MainActivity.this, MainNavigation.class).putExtra("name", name));
+                                }
+                            }
+                        }).start();
                 }
             }
         });
@@ -74,8 +82,5 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private boolean validate(String name, String password) {
-        return false;
-    }
 }
 

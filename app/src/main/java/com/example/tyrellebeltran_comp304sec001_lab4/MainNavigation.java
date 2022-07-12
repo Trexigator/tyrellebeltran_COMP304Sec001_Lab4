@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainNavigation extends AppCompatActivity {
@@ -16,6 +17,9 @@ public class MainNavigation extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_navigation);
 
+        TextView tName = findViewById(R.id.txtWelcName);
+        String name = getIntent().getStringExtra("name");
+        tName.setText("WELCOME " + name);
     }
 
     @Override
@@ -35,6 +39,7 @@ public class MainNavigation extends AppCompatActivity {
             case R.id.logout:
                 Toast.makeText(this, "You selected Logout!", Toast.LENGTH_LONG).show();
                 finish();
+                //sharedpreferences destroy data
                 startActivity(new Intent(this, MainActivity.class));
                 break;
             default:
