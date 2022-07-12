@@ -1,3 +1,25 @@
 <resources>
-    <string name="app_name">tyrellebeltran_COMP304Sec001_Lab4</string>
+    <!-- Customer Registration -->
+    <string name="app_name">T and J Automobiles</string>
+
+    <!-- Main Page -->
+    <string name="txtusername">Username</string>
+    <string name="txtpassword">"Password"</string>
+    <string name="txtregister">"Don't have an account? Register for free!</string>
+    <string name="btnLogin">Login</string>
+
+
+    <!-- Customer Registration -->
+    <string name="txtUserName">Username</string>
+    <string name="txtPassword">Password</string>
+    <string name="txtConfirmPassword">Confirm Password</string>
+    <string name="txtFirstName">First Name</string>
+    <string name="txtLastName">Last Name</string>
+    <string name="txtAddress">Address</string>
+    <string name="txtCity">City</string>
+    <string name="txtPostalCode">Postal code</string>
+    <string name="btnReg">Register</string>
+
+    <string name="custProfile">Customer Profile</string>
+    <string name="logout">Logout</string>
 </resources>

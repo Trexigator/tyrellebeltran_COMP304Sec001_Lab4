@@ -7,5 +7,5 @@ import androidx.room.Insert;
 public interface CustDao {
     @Insert
     void registerCust(CustEntity custEntity);
-    
+
 }
