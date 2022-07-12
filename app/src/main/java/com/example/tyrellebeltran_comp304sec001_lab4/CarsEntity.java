@@ -9,7 +9,7 @@ import java.util.Date;
 @Entity(tableName = "Cars")
 public class CarsEntity {
     @PrimaryKey(autoGenerate = true)
-    String carId;
+    Integer carId;
 
     @ColumnInfo(name = "brandName")
     String brandName;
@@ -30,11 +30,11 @@ public class CarsEntity {
     @ColumnInfo(name = "freeFoilWrap")
     Boolean freeFoilWrap;
 
-    public String getCarId() {
+    public Integer getCarId() {
         return carId;
     }
 
-    public void setCarId(String carId) {
+    public void setCarId(Integer carId) {
         this.carId = carId;
     }
 

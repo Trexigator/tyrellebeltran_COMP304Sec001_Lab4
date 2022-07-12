@@ -11,11 +11,11 @@ public class CarSalesEntity {
     @PrimaryKey(autoGenerate = true)
     Integer custId;
 
-    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "carId")
     String carId;
 
     @ColumnInfo(name = "paymentDate")
-    Date paymentDate;
+    String paymentDate;
 
     @ColumnInfo(name = "orderStatus")
     String orderStatus;
@@ -41,11 +41,11 @@ public class CarSalesEntity {
         this.carId = carId;
     }
 
-    public Date getPaymentDate() {
+    public String getPaymentDate() {
         return paymentDate;
     }
 
-    public void setPaymentDate(Date paymentDate) {
+    public void setPaymentDate(String paymentDate) {
         this.paymentDate = paymentDate;
     }
 

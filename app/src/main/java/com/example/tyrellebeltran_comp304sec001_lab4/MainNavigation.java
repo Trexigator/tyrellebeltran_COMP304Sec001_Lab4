@@ -3,6 +3,7 @@ package com.example.tyrellebeltran_comp304sec001_lab4;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -10,7 +11,14 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class MainNavigation extends AppCompatActivity {
+
+    Set<String> setUserNow = new HashSet<String>();
+    SharedPreferences myPref;
+    SharedPreferences.Editor prefEditor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +27,14 @@ public class MainNavigation extends AppCompatActivity {
 
         TextView tName = findViewById(R.id.txtWelcName);
         String name = getIntent().getStringExtra("name");
-        tName.setText("WELCOME " + name);
+        tName.setText("You are logged in as  " + name);
+
+        myPref = getSharedPreferences("info", MODE_PRIVATE);
+        setUserNow = myPref.getStringSet("user",new HashSet<String>());
+        prefEditor= myPref.edit();
+        setUserNow.add(name);
+        prefEditor.putStringSet("user",setUserNow);
+        prefEditor.commit();
     }
 
     @Override
@@ -35,11 +50,12 @@ public class MainNavigation extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.custProfile:
                 Toast.makeText(this, "You selected Customer Profile.", Toast.LENGTH_LONG).show();
+                startActivity(new Intent(this, CustomerActivity.class));
                 break;
             case R.id.logout:
                 Toast.makeText(this, "You selected Logout!", Toast.LENGTH_LONG).show();
                 finish();
-                //sharedpreferences destroy data
+                myPref.edit().clear().commit();
                 startActivity(new Intent(this, MainActivity.class));
                 break;
             default:

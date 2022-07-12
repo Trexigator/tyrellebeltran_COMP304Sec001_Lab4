@@ -20,6 +20,10 @@
     <string name="txtPostalCode">Postal code</string>
     <string name="btnReg">Register</string>
 
+    <!-- Menu Item -->
     <string name="custProfile">Customer Profile</string>
     <string name="logout">Logout</string>
+
+    <!-- Customer Profile -->
+    <string name="custScreen">Welcome to your Customer Profile</string>
 </resources>
