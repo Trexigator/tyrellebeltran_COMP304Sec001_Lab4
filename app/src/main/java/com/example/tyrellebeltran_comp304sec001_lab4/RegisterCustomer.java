@@ -2,6 +2,7 @@ package com.example.tyrellebeltran_comp304sec001_lab4;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -35,8 +36,8 @@ public class RegisterCustomer extends AppCompatActivity {
                     custEntity.setPostalCode(regPostalCode.getText().toString());
 
                     //proceed with insert
-                    CustDatabase custDatabase = CustDatabase.getCustDatabase(getApplicationContext());
-                    CustDao custDao = custDatabase.custDao();
+                    AppDatabase appDatabase = AppDatabase.getFileDatabase(getApplicationContext());
+                    CustDao custDao = appDatabase.custDao();
                     new Thread(new Runnable() {
                         @Override
                         public void run() {
@@ -46,6 +47,7 @@ public class RegisterCustomer extends AppCompatActivity {
                                 @Override
                                 public void run() {
                                     Toast.makeText(RegisterCustomer.this, "User " + regUser.getText().toString() + " created.", Toast.LENGTH_SHORT).show();
+                                    startActivity(new Intent(RegisterCustomer.this, MainNavigation.class));
                                 }
                             });
                         }

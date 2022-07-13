@@ -9,26 +9,26 @@ import java.util.Date;
 @Entity(tableName = "Cars")
 public class CarsEntity {
     @PrimaryKey(autoGenerate = true)
-    Integer carId;
+    private Integer carId;
 
     @ColumnInfo(name = "brandName")
-    String brandName;
+    private String brandName;
 
     @ColumnInfo(name = "modelName")
-    String modelName;
+    private String modelName;
 
     @ColumnInfo(name = "price")
-    Double price;
+    private Double price;
 
     @ColumnInfo(name = "color")
-    String color;
+    private String color;
 
     //(Any other two features of cars)
     @ColumnInfo(name = "hybrid")
-    Boolean hybrid;
+    private Boolean hybrid;
 
     @ColumnInfo(name = "freeFoilWrap")
-    Boolean freeFoilWrap;
+    private Boolean freeFoilWrap;
 
     public Integer getCarId() {
         return carId;

@@ -45,8 +45,8 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Incomplete details!", Toast.LENGTH_SHORT).show();
                 else {
                         //verify details against DB.
-                        CustDatabase custDatabase = CustDatabase.getCustDatabase(getApplicationContext());
-                        final CustDao custDao = custDatabase.custDao();
+                        AppDatabase appDatabase = AppDatabase.getFileDatabase(getApplicationContext());
+                        final CustDao custDao = appDatabase.custDao();
                         new Thread(new Runnable() {
                             @Override
                             public void run() {

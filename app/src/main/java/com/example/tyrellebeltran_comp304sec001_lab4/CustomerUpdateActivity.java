@@ -28,8 +28,8 @@ public class CustomerUpdateActivity extends MainNavigation {
             dispFName = userNow;
         }
         //Display customer info
-        CustDatabase custDatabase = CustDatabase.getCustDatabase(getApplicationContext());
-        final CustDao custDao = custDatabase.custDao();
+        AppDatabase appDatabase = AppDatabase.getFileDatabase(getApplicationContext());
+        final CustDao custDao = appDatabase.custDao();
         Toast.makeText(CustomerUpdateActivity.this, "dispFName = " + dispFName, Toast.LENGTH_SHORT).show();
         /*
         new Thread(new Runnable() {
