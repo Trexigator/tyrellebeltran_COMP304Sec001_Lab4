@@ -52,7 +52,7 @@ public class MainNavigation extends AppCompatActivity {
         btnCust.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainNavigation.this, CustomerUpdateActivity.class));
+                startActivity(new Intent(MainNavigation.this, CustomerActivity.class));
             }
         });
         //Navigate to Car Activity
@@ -77,7 +77,7 @@ public class MainNavigation extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.custProfile:
                 //Toast.makeText(this, "You selected Customer Profile.", Toast.LENGTH_LONG).show();
-                startActivity(new Intent(this, CustomerUpdateActivity.class));
+                startActivity(new Intent(this, CustomerActivity.class));
                 break;
             case R.id.logout:
                 Toast.makeText(this, "Goodbye", Toast.LENGTH_LONG).show();

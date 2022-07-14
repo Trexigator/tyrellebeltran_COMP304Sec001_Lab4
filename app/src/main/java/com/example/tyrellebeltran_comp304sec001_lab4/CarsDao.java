@@ -12,7 +12,7 @@ import java.util.List;
 public interface CarsDao {
 
     @Insert
-    void registerCars(CarsEntity carsEntity);
+    void insert(CarsEntity carsEntity);
 
     //Monitoring Query Result Changes with Live Data
     @Query("select * from Cars order by brandName")

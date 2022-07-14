@@ -11,7 +11,7 @@ import java.util.List;
 @Dao
 public interface CarSalesDao {
     @Insert
-    void registerCarSales(CarSalesEntity carSalesEntity);
+    void insert(CarSalesEntity carSalesEntity);
 
     //Monitoring Query Result Changes with Live Data
     @Query("select * from CarSales order by carId")
