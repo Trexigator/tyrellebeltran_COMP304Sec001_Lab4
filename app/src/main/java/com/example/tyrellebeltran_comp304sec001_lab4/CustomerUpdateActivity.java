@@ -31,7 +31,7 @@ public class CustomerUpdateActivity extends MainNavigation {
         AppDatabase appDatabase = AppDatabase.getFileDatabase(getApplicationContext());
         final CustDao custDao = appDatabase.custDao();
         Toast.makeText(CustomerUpdateActivity.this, "dispFName = " + dispFName, Toast.LENGTH_SHORT).show();
-        /*
+
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -47,9 +47,9 @@ public class CustomerUpdateActivity extends MainNavigation {
                 }
                 else{//if (custDisplay != null)
                     tFName.setText(custDisplay.firstName);
-                }
+                }*/
             }
-        }).start();*/
+        }).start();
 //----------------
     }
 }

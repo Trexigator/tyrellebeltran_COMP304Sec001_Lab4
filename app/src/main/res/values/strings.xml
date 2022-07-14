@@ -8,7 +8,6 @@
     <string name="txtregister">"Don't have an account? Register for free!</string>
     <string name="btnLogin">Login</string>
 
-
     <!-- Customer Registration -->
     <string name="txtUserName">Username</string>
     <string name="txtPassword">Password</string>
@@ -21,7 +20,7 @@
     <string name="btnReg">Register</string>
 
     <!-- Menu Item -->
-    <string name="custProfile">Customer Profile</string>
+    <string name="custProfile">Account Settings</string>
     <string name="logout">Logout</string>
 
     <!-- Cars -->

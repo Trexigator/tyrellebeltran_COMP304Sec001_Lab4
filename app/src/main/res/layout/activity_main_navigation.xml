@@ -1,16 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainNavigation">
 
+
     <TextView
         android:id="@+id/txtWelcName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:showAsAction="always"
-        tools:layout_editor_absoluteX="134dp"
-        tools:layout_editor_absoluteY="317dp" />
-</LinearLayout>
+        android:layout_width="399dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:showAsAction="always" />
+
+    <ImageView
+        android:id="@+id/user"
+        android:layout_width="183dp"
+        android:layout_height="137dp"
+        android:layout_marginStart="114dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="114dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/user" />
+
+    <ImageView
+        android:id="@+id/car"
+        android:layout_width="199dp"
+        android:layout_height="154dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginBottom="204dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/cars" />
+
+    <Button
+        android:id="@+id/btnViewCust"
+        android:layout_width="192dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginBottom="416dp"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:text="Customer Information"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnViewCar"
+        android:layout_width="192dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginBottom="124dp"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:text="VEHICLE Information"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

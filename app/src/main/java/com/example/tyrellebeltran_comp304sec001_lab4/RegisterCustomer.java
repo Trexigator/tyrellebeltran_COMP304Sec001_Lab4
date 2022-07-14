@@ -42,12 +42,12 @@ public class RegisterCustomer extends AppCompatActivity {
                         @Override
                         public void run() {
                             //register user
-                            custDao.registerCust(custEntity);
+                            custDao.insert(custEntity);
                             runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
                                     Toast.makeText(RegisterCustomer.this, "User " + regUser.getText().toString() + " created.", Toast.LENGTH_SHORT).show();
-                                    startActivity(new Intent(RegisterCustomer.this, MainNavigation.class));
+                                    startActivity(new Intent(RegisterCustomer.this, MainActivity.class));
                                 }
                             });
                         }
